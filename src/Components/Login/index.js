@@ -6,19 +6,19 @@ import FormGroup from '../FormGroup';
 class Login extends React.Component {
 
     state = {
-        email : '',
-        senha : ''
+        email: '',
+        senha: ''
     }
 
-    entrar = () =>{
+    entrar = () => {
         console.log('Email: ', this.state.email, 'Senha: ', this.state.senha)
     }
 
-    render(){
+    render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6" style={{position: 'relative', left: '300px'}}>
+                    <div className="col-md-6" style={{ position: 'relative', left: '300px' }}>
                         <div className="bs-docs-section">
                             <Card title="Login">
                                 <div className="row">
@@ -26,15 +26,15 @@ class Login extends React.Component {
                                         <div className="bs-component">
                                             <fieldset>
                                                 <FormGroup label="Email: *" htmlFor="exempleInputEmail">
-                                                    <input type="email" value= {this.state.email} onChange={e =>this.setState({email: e.target.value})}className="form-control"
-                                                    id="exempleInputEmail" aria-describedby="emailHelp" placeholder="Digite o Email"/>
+                                                    <input type="email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} className="form-control"
+                                                        id="exempleInputEmail" aria-describedby="emailHelp" placeholder="Digite o Email" />
                                                 </FormGroup>
                                                 <FormGroup label="Senha: *" htmlFor="exempleInputSenha">
-                                                    <input type="password" value= {this.state.senha} onChange={e =>this.setState({senha: e.target.value})} className="form-control"
-                                                    id="exempleInputSenha" placeholder="Password"/>
+                                                    <input type="password" value={this.state.senha} onChange={e => this.setState({ senha: e.target.value })} className="form-control"
+                                                        id="exempleInputSenha" placeholder="Password" />
                                                 </FormGroup>
                                             </fieldset>
-                                            <button className="btn btn-success" onClick ={this.entrar}>Entrar</button>
+                                            <button className="btn btn-success" onClick={this.entrar}>Entrar</button>
                                             <button className="btn btn-danger">Cadastrar</button>                                        </div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@ class Login extends React.Component {
                     </div>
                 </div>
             </div>
-          );
+        );
     }
 }
 
