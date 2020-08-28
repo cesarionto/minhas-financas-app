@@ -55,4 +55,4 @@ class CadastroUsuario extends React.Component {
     }
 }
 
-export default CadastroUsuario;
+export default withRouter(CadastroUsuario)
