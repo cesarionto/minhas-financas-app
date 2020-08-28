@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootswatch/dist/flatly/bootstrap.css'
-import Card from '../Card';
-import FormGroup from '../FormGroup';
+import Card from '../../Components/Card';
+import FormGroup from '../../Components/FormGroup';
 
 class Login extends React.Component {
 
