@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../../Components/Card';
+import Card from '../../Components/Card'
 import 'bootswatch/dist/flatly/bootstrap.css'
-import FormGroup from '../../Components/FormGroup';
-
+import FormGroup from '../../Components/FormGroup'
+import {withRouter} from 'react-router-dom'
 
 
 class CadastroUsuario extends React.Component {
@@ -15,6 +15,10 @@ class CadastroUsuario extends React.Component {
 
     cadastrar = () =>{
         console.log(this.state)
+    }
+
+    prepareCancelar = () => {
+        this.props.history.push('/login')
     }
 
     render(){
@@ -41,7 +45,7 @@ class CadastroUsuario extends React.Component {
                                         onChange={e => this.setState({senhaRepetida: e.target.value})}/>
                                     </FormGroup>
                                     <button className="btn btn-success" onClick={this.cadastrar}>Salvar</button>
-                                    <button className="btn btn-danger">Cancelar</button>
+                                    <button onClick={this.prepareCancelar}className="btn btn-danger">Cancelar</button>
                                 </fieldset>
                             </div>
                         </div>

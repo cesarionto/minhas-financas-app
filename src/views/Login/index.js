@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import 'bootswatch/dist/flatly/bootstrap.css'
-import Card from '../../Components/Card';
-import FormGroup from '../../Components/FormGroup';
+import Card from '../../Components/Card'
+import FormGroup from '../../Components/FormGroup'
+import {withRouter} from 'react-router-dom'
 
 class Login extends React.Component {
 
@@ -12,6 +13,10 @@ class Login extends React.Component {
 
     entrar = () => {
         console.log('Email: ', this.state.email, 'Senha: ', this.state.senha)
+    }
+
+    prepareCadastrar = () => {
+        this.props.history.push('/cadastro')
     }
 
     render() {
@@ -34,15 +39,15 @@ class Login extends React.Component {
                                                 </FormGroup>
                                             </fieldset>
                                             <button className="btn btn-success" onClick={this.entrar}>Entrar</button>
-                                            <button className="btn btn-danger">Cadastrar</button>                                        </div>
+                                            <button onClick={this.prepareCadastrar}className="btn btn-danger">Cadastrar</button>                                        </div>
                                     </div>
                                 </div>
                             </Card>
                         </div>
                     </div>
                 </div>
-        );
+        )
     }
 }
 
-export default Login;
+export default withRouter( Login )
