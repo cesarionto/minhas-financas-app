@@ -6,7 +6,7 @@ import NavBar from './Components/NavBar';
 function App() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <div className="container">
         <Rotas />
       </div>
