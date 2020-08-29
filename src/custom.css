@@ -2,6 +2,10 @@ body {
     padding-top: 120px
 }
 
+.container-full-top{
+    display: grid;
+    place-items: center;
+}
 pre {
     background: #f7f7f9
 }

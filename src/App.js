@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="container">
+      <div className="container container-full-top">
         <Rotas />
       </div>
     </>
