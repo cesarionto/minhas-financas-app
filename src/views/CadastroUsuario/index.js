@@ -3,6 +3,7 @@ import Card from '../../Components/Card'
 import 'bootswatch/dist/flatly/bootstrap.css'
 import FormGroup from '../../Components/FormGroup'
 import { withRouter } from 'react-router-dom'
+import api from '../../api'
 
 
 class CadastroUsuario extends React.Component {
@@ -14,7 +15,15 @@ class CadastroUsuario extends React.Component {
     }
 
     cadastrar = () => {
-        console.log(this.state)
+            api.post("/usuarios", {
+                nome: this.state.nome,
+                email: this.state.email,
+                senha: this.state.senha
+            }).then(response => {
+                console.log(response)
+            }).catch(erro => {
+                console.log(erro.response)
+            })
     }
 
     prepareCancelar = () => {

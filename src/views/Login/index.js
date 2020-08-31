@@ -4,6 +4,8 @@ import Card from '../../Components/Card'
 import FormGroup from '../../Components/FormGroup'
 import { withRouter } from 'react-router-dom'
 
+import api from '../../api'
+
 class Login extends React.Component {
 
     state = {
@@ -11,8 +13,17 @@ class Login extends React.Component {
         senha: ''
     }
 
-    entrar = () => {
-        console.log('Email: ', this.state.email, 'Senha: ', this.state.senha)
+     entrar = () => {
+        api.post('/usuarios/autenticar', {
+            email: this.state.email,
+            senha: this.state.senha
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
     prepareCadastrar = () => {
@@ -26,7 +37,7 @@ class Login extends React.Component {
                     <div className="bs-docs-section">
                         <Card title="Login">
                             <div className="row">
-                                <div className="col-lg-12">
+                                <div className="col-lg-15">
                                     <div className="bs-component">
                                         <fieldset>
                                             <FormGroup label="Email: *" htmlFor="exempleInputEmail">
