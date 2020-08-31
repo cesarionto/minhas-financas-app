@@ -1,5 +1,5 @@
 # Minhas Finanças - REACT APP - By Cesário Pereira Neto
--
+
 [![Screanshot da tela inicial](./screanshot.png)]()
 -
 Consiste em uma aplicação de controle de finanças de muitos usuários,
@@ -10,6 +10,20 @@ Esta aplicação foi desenvolvida durante o curso ["Spring Boot + React JS: Dese
 
 - Feito em Javascript usando o [React](https://pt-br.reactjs.org/), pelo comando 'npx create-react-app'.
 - Gerenciamento de requisição com o [Axios](https://github.com/axios/axios/).
+- Gerenciamento de rotas com [react-dom](https://pt-br.reactjs.org/docs/react-dom.html)
 
+# Como rodar a aplicação localmente?
+- Instale a engine [NodeJS](https://nodejs.org/en/)
+- Clone este repositorio.
+- Descompacte o arquivo.
+- Na raiz do projeto, Execute os SCRIPTS:
+    ```cmd
+    npm install
+    ```
+
+    ```cmd
+    npm start
+    ```
+- A Aplicação abrirá na porta 3000 do navegador.
 
 
