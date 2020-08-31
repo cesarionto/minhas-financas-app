@@ -13,7 +13,7 @@ Esta aplicação foi desenvolvida durante o curso ["Spring Boot + React JS: Dese
 - Gerenciamento de rotas com [react-dom](https://pt-br.reactjs.org/docs/react-dom.html)
 
 # Como rodar a aplicação localmente?
-- !IMPORTANTE! Clone o repositório ["Minhas Financas - API - By Cesário Pereira Neto"](https://github.com/cesarionto/api-minhas-financas) e siga as instruções no README.md.
+- !IMPORTANTE! Clone o repositório ["Minhas Financas - API - By Cesário Pereira Neto"](https://github.com/cesarionto/api-minhas-financas) e siga as instruções no README.
 - Instale a engine [NodeJS](https://nodejs.org/en/)
 - Clone este repositorio.
 - Descompacte o arquivo.
