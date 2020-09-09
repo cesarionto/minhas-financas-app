@@ -14,8 +14,8 @@ class CadastroUsuario extends React.Component {
         senhaRepetida: ''
     }
 
-    cadastrar = () => {
-            api.post("/usuarios", {
+    cadastrar = async () => {
+            await api.post("/usuarios", {
                 nome: this.state.nome,
                 email: this.state.email,
                 senha: this.state.senha

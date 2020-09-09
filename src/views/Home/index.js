@@ -1,9 +1,20 @@
 import React from 'react'
-
+import api from '../../api'
 
 class Home extends React.Component {
     state = {
         saldo: 0
+    }
+    //É executado sempre que o componnte é montado
+    componentDidMount(){
+        const usuario_logado = localStorage.getItem('_usuario_logado')
+        const usuario_logado_objeto = JSON.parse(usuario_logado)
+        console.log(usuario_logado_objeto)
+        api.get(`/usuarios/${usuario_logado_objeto.id}/saldo`).then(response =>{
+            this.setState({saldo: response.data})
+        }).catch(erro =>{
+            console.log(erro.response)
+        })
     }
     render() {
         return (
